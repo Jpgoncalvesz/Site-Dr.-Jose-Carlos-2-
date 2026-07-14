@@ -1,14 +1,26 @@
-# Dr. José Carlos Cardoso Ribeiro
+# Site Institucional - Dr. José Carlos Cardoso Ribeiro e IAJ
 
-Landing page institucional e responsiva para apresentação profissional do Dr. José Carlos Cardoso Ribeiro, Advogado e Professor em Ceres-GO, com foco em contato pelo WhatsApp.
+Site institucional responsivo em HTML, CSS e JavaScript puro para apresentar:
 
-## Estrutura
+- Dr. José Carlos Cardoso Ribeiro
+- Atuação jurídica
+- Biografia e trajetória
+- IAJ - Instituto de Atualização Jurídica
+- Conteúdos e canais oficiais
+- Contato por WhatsApp
+
+## Arquivos
 
 - `index.html`
 - `styles.css`
 - `script.js`
+- `privacidade.html`
+- `termos.html`
+- `aviso-privacidade.html`
 - `assets/icons/whatsapp.svg`
 
-## Publicação
+## Observações
 
-O projeto é estático e pode ser publicado no GitHub Pages, Netlify ou qualquer hospedagem convencional.
+O projeto evita dados não confirmados. Biografia, áreas de atuação, cursos, endereço, horários, fotografia e logotipos oficiais devem ser validados antes da publicação definitiva.
+
+O site é estático e pode ser publicado no GitHub Pages, Netlify ou hospedagem convencional.
