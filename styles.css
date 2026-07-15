@@ -391,53 +391,116 @@ h3 {
   padding: 10px 14px;
 }
 
-.hero-identity {
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius);
+.hero-portrait {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 430px);
+}
+
+.portrait-shell {
+  position: relative;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px 18px 8px 8px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035)),
-    radial-gradient(circle at top right, rgba(179, 32, 37, 0.18), transparent 38%);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035)),
+    radial-gradient(circle at top right, rgba(179, 32, 37, 0.24), transparent 34%);
   box-shadow: var(--shadow);
 }
 
-.identity-frame {
-  min-height: 380px;
-  display: grid;
-  align-content: center;
-  justify-items: center;
+.portrait-shell::before {
+  content: "";
+  position: absolute;
+  inset: -18px 32px 34px -18px;
+  z-index: -1;
+  border: 1px solid rgba(179, 32, 37, 0.55);
+  border-radius: 18px;
+}
+
+.portrait-shell picture {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px 12px 6px 6px;
+  background: var(--black);
+}
+
+.portrait-shell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 34%;
+  filter: contrast(1.04) saturate(0.96) brightness(0.92);
+}
+
+.portrait-shell picture::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 12px 12px 6px 6px;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0) 48%, rgba(8, 8, 8, 0.72) 100%),
+    radial-gradient(circle at 78% 18%, rgba(179, 32, 37, 0.18), transparent 34%);
+  pointer-events: none;
+}
+
+.portrait-badge {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 14px;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid rgba(179, 32, 37, 0.22);
+  padding: 12px 14px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius);
+  background: rgba(8, 8, 8, 0.62);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 }
 
-.brand-mark-large {
-  width: 124px;
-  height: 124px;
-  font-size: 1.45rem;
-}
-
-.identity-frame strong {
-  font-family: var(--font-title);
-  font-size: 1.45rem;
-}
-
-.identity-frame small,
-.identity-frame em,
-.hero-identity p {
-  color: rgba(255, 255, 255, 0.66);
-  font-style: normal;
-}
-
-.hero-identity p {
-  margin: 16px 4px 0;
-  font-size: 0.88rem;
+.portrait-badge span,
+.portrait-badge strong {
+  font-size: 0.78rem;
 }
 
 .section {
   padding: 92px 0;
+}
+
+.manifesto-section {
+  padding: 70px 0;
+  color: var(--white);
+  background: var(--black);
+  border-top: 1px solid rgba(179, 32, 37, 0.22);
+  border-bottom: 1px solid rgba(179, 32, 37, 0.22);
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 42px;
+  align-items: start;
+}
+
+.manifesto-number {
+  color: rgba(255, 255, 255, 0.08);
+  font-family: var(--font-title);
+  font-size: clamp(5rem, 13vw, 11rem);
+  line-height: 0.82;
+}
+
+.manifesto-copy {
+  max-width: 860px;
+}
+
+.manifesto-copy p:last-child {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(1.05rem, 2vw, 1.26rem);
 }
 
 .section-dark {
@@ -575,6 +638,29 @@ h3 {
   color: rgba(255, 255, 255, 0.64);
 }
 
+.bio-photo-card {
+  position: relative;
+  margin: 34px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.bio-photo-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: 50% 38%;
+  filter: contrast(1.02) brightness(0.9);
+}
+
+.bio-photo-card figcaption {
+  padding: 12px 14px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.8rem;
+}
+
 .legal-section {
   background: var(--gray-100);
 }
@@ -609,7 +695,8 @@ h3 {
 
 .practice-grid,
 .iaj-cards,
-.content-grid {
+.content-grid,
+.principles-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
@@ -617,7 +704,8 @@ h3 {
 
 .practice-card,
 .iaj-card,
-.content-card {
+.content-card,
+.principles-grid article {
   min-height: 220px;
   padding: 24px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -642,12 +730,64 @@ h3 {
   background: var(--white);
 }
 
+.principles-grid {
+  margin-top: 18px;
+}
+
+.principles-grid article {
+  min-height: 190px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.principles-grid span {
+  color: var(--red);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.principles-grid p {
+  color: var(--gray-500);
+}
+
 .iaj-section,
+.founder-section,
 .contact-section {
   color: var(--white);
   background:
     radial-gradient(circle at 84% 22%, rgba(179, 32, 37, 0.24), transparent 30%),
     linear-gradient(135deg, var(--black), var(--graphite));
+}
+
+.iaj-visual {
+  align-self: stretch;
+}
+
+.iaj-logo-card {
+  height: 100%;
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    #050505;
+  box-shadow: var(--shadow);
+}
+
+.iaj-logo-card img {
+  width: min(100%, 430px);
+  height: auto;
+}
+
+.iaj-cards {
+  margin-top: 34px;
 }
 
 .iaj-card {
@@ -670,9 +810,99 @@ h3 {
   color: var(--black);
 }
 
+.founder-section {
+  padding: 92px 0;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.68fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.founder-media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px 18px 8px 8px;
+  box-shadow: var(--shadow);
+}
+
+.founder-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0) 46%, rgba(8, 8, 8, 0.7) 100%),
+    radial-gradient(circle at 18% 18%, rgba(179, 32, 37, 0.22), transparent 34%);
+}
+
+.founder-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 52% 34%;
+  filter: contrast(1.02) brightness(0.92);
+}
+
+.founder-copy p:not(.section-kicker) {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+}
+
+.founder-logo {
+  width: min(360px, 100%);
+  margin-top: 26px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: #050505;
+}
+
+.founder-logo img {
+  width: 100%;
+  height: auto;
+}
+
 .content-section,
 .faq-section {
   background: var(--white);
+}
+
+.content-showcase {
+  margin-bottom: 18px;
+}
+
+.video-preview {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(179, 32, 37, 0.24), transparent 30%),
+    #050505;
+  box-shadow: var(--shadow);
+}
+
+.video-preview img {
+  width: min(82%, 560px);
+  height: auto;
+  opacity: 0.9;
+}
+
+.video-preview a {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  padding: 12px 16px;
+  color: var(--white);
+  border-radius: var(--radius);
+  background: var(--red);
+  font-weight: 900;
 }
 
 .content-card {
@@ -941,14 +1171,21 @@ h3 {
   .bio-layout,
   .iaj-layout,
   .faq-layout,
+  .founder-grid,
   .legal-grid {
     grid-template-columns: 1fr;
   }
 
   .practice-grid,
   .iaj-cards,
-  .content-grid {
+  .content-grid,
+  .principles-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-portrait {
+    justify-self: start;
+    width: min(100%, 460px);
   }
 
   .footer-grid {
@@ -981,6 +1218,7 @@ h3 {
   .hero-actions,
   .iaj-actions,
   .course-placeholder,
+  .manifesto-grid,
   .route-grid,
   .contact-grid {
     display: grid;
@@ -991,13 +1229,41 @@ h3 {
     width: 100%;
   }
 
-  .identity-frame {
-    min-height: 310px;
+  .portrait-shell picture {
+    aspect-ratio: 1 / 1.08;
+  }
+
+  .portrait-badge {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    display: grid;
+    gap: 2px;
   }
 
   .section,
   .contact-section {
     padding: 68px 0;
+  }
+
+  .manifesto-section,
+  .founder-section {
+    padding: 68px 0;
+  }
+
+  .bio-photo-card img,
+  .founder-media img {
+    aspect-ratio: 1 / 1.08;
+  }
+
+  .video-preview {
+    min-height: 260px;
+  }
+
+  .video-preview a {
+    left: 16px;
+    right: 16px;
+    text-align: center;
   }
 
   .floating-whatsapp {

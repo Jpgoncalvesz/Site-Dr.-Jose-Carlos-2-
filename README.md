@@ -18,9 +18,15 @@ Site institucional responsivo em HTML, CSS e JavaScript puro para apresentar:
 - `termos.html`
 - `aviso-privacidade.html`
 - `assets/icons/whatsapp.svg`
+- `assets/icons/favicon.svg`
+- `assets/images/jose-carlos-hero.webp`
+- `assets/images/jose-carlos-mobile.webp`
+- `assets/images/jose-carlos-biografia.webp`
+- `assets/images/social-card.jpg`
+- `assets/logos/iaj.webp`
 
 ## Observações
 
-O projeto evita dados não confirmados. Biografia, áreas de atuação, cursos, endereço, horários, fotografia e logotipos oficiais devem ser validados antes da publicação definitiva.
+O projeto evita dados não confirmados. Biografia, áreas de atuação, cursos, endereço, horários, fotografia e logotipo do IAJ devem ser validados antes da publicação definitiva.
 
 O site é estático e pode ser publicado no GitHub Pages, Netlify ou hospedagem convencional.
