@@ -790,6 +790,181 @@ h3 {
   margin-top: 34px;
 }
 
+.iaj-commercial-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: center;
+  margin-top: 34px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 5px solid var(--red);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 92% 18%, rgba(179, 32, 37, 0.34), transparent 28%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035));
+  box-shadow: var(--shadow);
+}
+
+.iaj-commercial-band h3 {
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.iaj-commercial-band p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.commercial-status,
+.course-status {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 10px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(179, 32, 37, 0.78);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.commercial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.iaj-courses {
+  margin-top: 36px;
+}
+
+.course-heading {
+  max-width: 780px;
+  margin-bottom: 22px;
+}
+
+.course-heading h3 {
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.course-heading p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 22px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.045)),
+    rgba(8, 8, 8, 0.38);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(211, 75, 81, 0.48);
+  box-shadow: 0 24px 62px rgba(0, 0, 0, 0.2);
+}
+
+.course-topline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-card h3 {
+  margin-top: 10px;
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: 1.45rem;
+}
+
+.course-card p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.course-card dl {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 22px;
+}
+
+.course-card dl div {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.course-card dt {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.course-card dd {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.course-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.course-actions span {
+  display: inline-flex;
+  justify-content: center;
+  min-height: 42px;
+  padding: 11px 14px;
+  color: rgba(255, 255, 255, 0.74);
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.course-data-note {
+  margin-top: 16px;
+  padding: 18px 20px;
+  color: rgba(255, 255, 255, 0.74);
+  border: 1px dashed rgba(211, 75, 81, 0.46);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.22);
+}
+
 .iaj-card {
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.12);
@@ -1178,6 +1353,7 @@ h3 {
 
   .practice-grid,
   .iaj-cards,
+  .course-grid,
   .content-grid,
   .principles-grid {
     grid-template-columns: 1fr;
@@ -1217,12 +1393,31 @@ h3 {
 
   .hero-actions,
   .iaj-actions,
+  .commercial-actions,
+  .iaj-commercial-band,
   .course-placeholder,
   .manifesto-grid,
   .route-grid,
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .iaj-commercial-band {
+    padding: 22px;
+  }
+
+  .commercial-actions {
+    justify-content: stretch;
+  }
+
+  .course-card dl div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .course-card dd {
+    text-align: left;
   }
 
   .btn {
