@@ -1008,6 +1008,8 @@ h3 {
 .approved-card {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: var(--radius);
   background:
@@ -1044,14 +1046,15 @@ h3 {
 
 .approved-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: contain;
+  aspect-ratio: 530 / 643;
+  object-fit: cover;
   filter: contrast(1.04) saturate(1.03);
 }
 
 .approved-content {
   position: relative;
   z-index: 1;
+  flex: 1;
   padding: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.2);
@@ -1613,10 +1616,6 @@ h3 {
 
   .course-card dd {
     text-align: left;
-  }
-
-  .approved-card img {
-    aspect-ratio: 4 / 3;
   }
 
   .approved-feature-copy {
