@@ -28,9 +28,9 @@ Site institucional responsivo em HTML, CSS e JavaScript puro para apresentar:
 
 ## Alunos aprovados do IAJ
 
-As imagens dos aprovados ficam em `assets/images/aprovados`.
+As imagens dos aprovados ficam em `assets/images/aprovados`, preferencialmente em WebP otimizado.
 
-Para adicionar um novo aluno aprovado, copie a imagem para essa pasta e replique um card da seção `aprovados-iaj` no `index.html`, preenchendo nome, selo e concurso apenas com dados confirmados.
+Para adicionar um novo aluno aprovado, converta a imagem para WebP, copie para essa pasta e replique um card da seção `aprovados-iaj` no `index.html`, preenchendo nome, selo e concurso apenas com dados confirmados.
 
 ## Observações
 

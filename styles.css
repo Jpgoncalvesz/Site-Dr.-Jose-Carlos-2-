@@ -912,6 +912,14 @@ h3 {
 
 .approved-showcase {
   margin-top: 48px;
+  padding: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(179, 32, 37, 0.34), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.035)),
+    rgba(5, 5, 5, 0.36);
+  box-shadow: var(--shadow);
 }
 
 .approved-heading {
@@ -931,11 +939,12 @@ h3 {
 
 .approved-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .approved-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: var(--radius);
@@ -946,6 +955,15 @@ h3 {
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.approved-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 32%);
+  opacity: 0.55;
+}
+
 .approved-card:hover {
   transform: translateY(-6px);
   border-color: rgba(211, 75, 81, 0.48);
@@ -953,22 +971,28 @@ h3 {
 }
 
 .approved-card figure {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
   margin: 0;
+  padding: 10px;
   background: #080808;
 }
 
 .approved-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
-.approved-card-feature img {
-  object-position: 50% 20%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  filter: contrast(1.04) saturate(1.03);
 }
 
 .approved-content {
+  position: relative;
+  z-index: 1;
   padding: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .approved-content span {
