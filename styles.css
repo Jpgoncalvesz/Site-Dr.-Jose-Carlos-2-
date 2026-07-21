@@ -1041,13 +1041,14 @@ h3 {
   place-items: center;
   margin: 0;
   padding: 10px;
+  aspect-ratio: 530 / 643;
   background: #080808;
 }
 
 .approved-card img {
   width: 100%;
-  aspect-ratio: 530 / 643;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   filter: contrast(1.04) saturate(1.03);
 }
 
