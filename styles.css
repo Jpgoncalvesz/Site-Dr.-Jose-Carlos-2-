@@ -1046,9 +1046,8 @@ h3 {
 }
 
 .approved-card img {
-  width: auto;
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
   filter: contrast(1.04) saturate(1.03);
 }
