@@ -910,6 +910,106 @@ h3 {
   color: rgba(255, 255, 255, 0.68);
 }
 
+.approved-showcase {
+  margin-top: 48px;
+}
+
+.approved-heading {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.approved-heading h3 {
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+}
+
+.approved-heading p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.approved-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.approved-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035)),
+    rgba(5, 5, 5, 0.62);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.approved-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(211, 75, 81, 0.48);
+  box-shadow: 0 24px 62px rgba(0, 0, 0, 0.24);
+}
+
+.approved-card figure {
+  margin: 0;
+  background: #080808;
+}
+
+.approved-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.approved-card-feature img {
+  object-position: 50% 20%;
+}
+
+.approved-content {
+  padding: 18px;
+}
+
+.approved-content span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 6px 9px;
+  color: var(--white);
+  border-radius: 999px;
+  background: var(--red);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.approved-content h4 {
+  margin: 0 0 4px;
+  color: var(--white);
+  font-family: var(--font-title);
+  font-size: 1.24rem;
+}
+
+.approved-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 800;
+}
+
+.approved-note {
+  margin-top: 18px;
+  padding: 16px 18px;
+  color: rgba(255, 255, 255, 0.68);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.approved-note strong {
+  color: var(--white);
+}
+
 .course-card dl {
   display: grid;
   gap: 8px;
@@ -1354,6 +1454,7 @@ h3 {
   .practice-grid,
   .iaj-cards,
   .course-grid,
+  .approved-grid,
   .content-grid,
   .principles-grid {
     grid-template-columns: 1fr;
@@ -1418,6 +1519,10 @@ h3 {
 
   .course-card dd {
     text-align: left;
+  }
+
+  .approved-card img {
+    aspect-ratio: 4 / 3;
   }
 
   .btn {

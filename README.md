@@ -23,7 +23,14 @@ Site institucional responsivo em HTML, CSS e JavaScript puro para apresentar:
 - `assets/images/jose-carlos-mobile.webp`
 - `assets/images/jose-carlos-biografia.webp`
 - `assets/images/social-card.jpg`
+- `assets/images/aprovados/`
 - `assets/logos/iaj.webp`
+
+## Alunos aprovados do IAJ
+
+As imagens dos aprovados ficam em `assets/images/aprovados`.
+
+Para adicionar um novo aluno aprovado, copie a imagem para essa pasta e replique um card da seção `aprovados-iaj` no `index.html`, preenchendo nome, selo e concurso apenas com dados confirmados.
 
 ## Observações
 
