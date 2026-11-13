@@ -1,0 +1,31 @@
+
+/* SEO practice pages — additive styles, preserving the original website */
+.practice-page{background:#f8f7f4;color:#1c242a}
+.practice-page .site-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem max(5%,calc((100% - 1120px)/2));background:#111b25;color:white}
+.practice-page .site-header a{color:inherit;text-decoration:none}
+.practice-page .brand{display:flex;align-items:center;gap:.8rem}
+.practice-page .brand-mark{display:grid;place-items:center;width:46px;height:46px;border:1px solid #a99a7c;border-radius:50%;font-size:.75rem}
+.practice-page .brand-copy{display:grid;gap:.2rem}
+.practice-page .brand-copy small{font-size:.72rem}
+.practice-main{max-width:1050px;margin:auto;padding:2.5rem 1.25rem 4rem}
+.practice-main .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:#7d6b4e}
+.practice-main h1{font-size:clamp(2rem,4vw,3.25rem);line-height:1.16;margin:1rem 0}
+.practice-main h2{font-size:clamp(1.35rem,2vw,1.8rem);margin:1.8rem 0 .7rem}
+.practice-main p{line-height:1.75}
+.practice-breadcrumb{font-size:.85rem;margin-bottom:2rem}
+.practice-author{font-weight:600}
+.practice-intro{font-size:1.1rem;max-width:850px}
+.practice-actions,.contact-options{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}
+.practice-page .btn-whatsapp{display:inline-flex;align-items:center;gap:.5rem;background:#176b48;color:white;border-radius:8px;padding:.85rem 1.1rem;text-decoration:none}
+.practice-page .btn-whatsapp img{width:20px;height:20px}
+.practice-body section,.practice-faq,.practice-contact{padding:1.25rem 0;border-top:1px solid #dedbd4}
+.practice-faq details{padding:1rem 0;border-bottom:1px solid #dedbd4}
+.practice-faq summary{cursor:pointer;font-weight:600}
+.practice-contact address{font-style:normal;line-height:1.8}
+.practice-related{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin:1.5rem 0}
+.practice-related a{padding:1rem;background:#fff;border:1px solid #e2ded5;border-radius:8px;text-decoration:none}
+.practice-page footer{padding:2rem 5%;background:#111b25;color:#fff}
+.practice-page footer a{color:#e9d8b8}
+.practice-page .floating-whatsapp{position:fixed;bottom:1rem;right:1rem;background:#176b48;color:#fff;border-radius:40px;padding:.7rem 1rem;display:flex;gap:.5rem;align-items:center;text-decoration:none;box-shadow:0 6px 20px #0003}
+.practice-page .floating-whatsapp img{width:22px;height:22px}
+@media(max-width:600px){.practice-page .floating-whatsapp span{display:none}.practice-page .page-back{font-size:.8rem}.practice-main{padding-top:1.5rem}}
