@@ -1,0 +1,101 @@
+/* Incremental improvements to the published site, 16 November 2026. */
+:root{--guide-ink:#18252e;--guide-muted:#4b5b65;--guide-line:#d7d9d4;--guide-accent:#7b2529}
+html{scroll-padding-top:7rem}
+section[id],article[id],.guide-sources li[id]{scroll-margin-top:7rem}
+.bio-photo-card img,.founder-media img{object-position:center 25%}
+.hero .contact-options{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:20px;font-size:.88rem;line-height:1.6}
+.hero .contact-options a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+.guides-home{margin:0 0 46px;padding:30px;border:1px solid #ddd6c9;border-radius:12px;background:#fbfaf7;color:var(--guide-ink)}
+.guides-home>h3{font-size:clamp(1.5rem,3vw,2rem);margin:.5rem 0}
+.guides-home>p{color:var(--guide-muted)}
+.guide-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.guide-card{background:#fff;padding:24px;border:1px solid var(--guide-line);border-top:3px solid var(--guide-accent);border-radius:5px}
+.guide-label{font-size:.72rem!important;text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:#7b2529!important;margin:0 0 12px}
+.guide-card h3{font-size:1.25rem;line-height:1.4;margin:0 0 14px}
+.guide-card h3 a{color:var(--guide-ink);text-decoration:none}
+.guide-card p{font-size:.9rem;color:var(--guide-muted);line-height:1.7}
+.guide-read{display:inline-flex;gap:10px;align-items:center;min-height:44px;font-weight:700;color:#7b2529;text-decoration:underline;text-underline-offset:4px}
+.enhanced-practice .site-header{position:relative;flex-wrap:wrap}
+.enhanced-practice .practice-main{padding-top:2.5rem}
+.enhanced-practice .practice-main a:not(.btn){color:#14597a;text-decoration:underline;text-underline-offset:3px}
+.enhanced-practice .practice-main p,.enhanced-practice .practice-main li{color:#283741}
+.enhanced-practice .practice-main .eyebrow{color:#715631}
+.enhanced-practice .practice-breadcrumb{line-height:1.7}
+.enhanced-practice .guided-contact-link{font-size:.88rem;margin:1rem 0}
+.guided-contact-link a,.contact-card .guided-contact-link{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+.guide-callout{background:#fff;border:1px solid var(--guide-line)!important;border-left:4px solid var(--guide-accent)!important;padding:22px!important;margin:1.5rem 0;border-radius:6px}
+.guide-callout h2{margin:.2rem 0 .8rem}
+.legal-guide{max-width:940px}
+.guide-heading h1{max-width:900px}
+.guide-date{font-size:.8rem;color:var(--guide-muted)!important}
+.guide-toc{max-width:760px;padding:24px;background:#efeee8;border:1px solid #ddd8ca;border-radius:6px;margin:28px 0 40px}
+.guide-toc ol{margin:.8rem 0 0;padding-left:22px;display:grid;gap:8px}
+.guide-toc a{line-height:1.7}
+.guide-prose,.guide-sources{max-width:760px}
+.guide-prose section{padding:8px 0 20px;border-bottom:1px solid var(--guide-line)}
+.guide-prose p{font-size:1rem;line-height:1.85;margin:1rem 0}
+.guide-prose h2{line-height:1.4}
+.document-list{padding-left:24px;line-height:1.8;display:grid;gap:9px;margin:18px 0}
+.guide-source-inline{font-size:.78rem!important;margin:16px 0 0!important;color:var(--guide-muted)!important}
+.guide-sources{padding:20px 0;line-height:1.8}
+.guide-sources ol{padding-left:22px;display:grid;gap:10px}
+.guide-sources li{font-size:.85rem;overflow-wrap:anywhere}
+.guide-sources>p{font-size:.82rem;color:var(--guide-muted)!important}
+.guide-next{margin:30px 0 0;padding:28px;border:1px solid var(--guide-line);background:#fff;border-radius:8px}
+.guide-next h2{margin-top:0}
+.guide-next .practice-actions{align-items:center}
+.print-guide{background:transparent;border:1px solid #6d7b85;padding:11px 16px;border-radius:5px;color:var(--guide-ink);font:inherit;font-size:.85rem;cursor:pointer;min-height:44px}
+.print-guide[hidden]{display:none!important}
+.guide-footer address{font-style:normal;line-height:1.9}
+.guide-footer nav{display:flex;flex-wrap:wrap;gap:6px 24px;margin:18px 0}
+.guide-footer nav a{display:inline-flex;align-items:center;min-height:44px}
+.contact-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,1fr);gap:36px;margin-top:32px;align-items:start}
+.contact-builder{background:white;border:1px solid var(--guide-line);border-radius:8px;padding:30px}
+.contact-builder h2{margin-top:0}
+.contact-fields{display:grid;gap:20px;margin:24px 0}
+.contact-fields[hidden]{display:none}
+.contact-fields label{display:block;font-weight:700;font-size:.9rem;margin-bottom:8px;color:var(--guide-ink)}
+.contact-fields select{width:100%;min-height:50px;padding:10px 36px 10px 12px;border:1px solid #7d8d96;border-radius:4px;background:white;color:#18252e;font:inherit;font-size:.95rem}
+.message-preview{white-space:pre-line;background:#f0f3ef;border-left:3px solid #176b48;padding:18px;line-height:1.8;font-size:.92rem;overflow-wrap:anywhere}
+.contact-send{width:100%;justify-content:center;text-align:center;margin:8px 0}
+.contact-explain{font-size:.78rem;line-height:1.7;color:var(--guide-muted)!important}
+.contact-office{padding:24px 0}
+.contact-office h2{margin-top:0}
+.contact-office h3{margin:20px 0 8px}
+.contact-office address{font-style:normal;line-height:1.9}
+.contact-office hr{margin:28px 0;border:0;border-top:1px solid var(--guide-line)}
+.contact-office a{display:inline-block;min-height:30px}
+.enhanced-practice .site-header .brand-copy{min-width:0}
+.enhanced-practice .site-header .brand-copy strong{white-space:normal}
+@media(max-width:980px){.site-nav{max-height:calc(100vh - 88px);max-height:calc(100dvh - 88px);overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:680px){
+ .hero h1{font-size:clamp(2.35rem,10vw,2.75rem);line-height:1.1}
+ .site-nav{max-height:calc(100vh - 164px);max-height:calc(100dvh - 164px - env(safe-area-inset-bottom,0px))}
+ .has-contact-shortcut{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+ .has-contact-shortcut .floating-whatsapp{display:flex!important;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:auto;max-width:none;min-height:50px;justify-content:center;font-size:.88rem;padding:12px 14px;border-radius:8px;background:#176b48;box-shadow:0 4px 20px #0003}
+ .has-contact-shortcut .floating-whatsapp span{display:inline!important}
+ .has-contact-shortcut .floating-whatsapp img{width:22px;height:22px;flex:none}
+ .guide-cards,.contact-layout{grid-template-columns:1fr}
+ .guides-home{padding:22px 18px}
+ .guide-card{padding:22px 18px}
+ .contact-layout{gap:16px}
+ .contact-builder{padding:24px 18px}
+ .enhanced-practice .site-header{gap:12px;padding:16px 20px}
+ .enhanced-practice .site-header .brand-copy strong{font-size:.8rem;line-height:1.5}
+ .enhanced-practice .brand-mark{width:40px;height:40px;flex:none}
+ .enhanced-practice .page-back{font-size:.8rem;min-height:30px;display:inline-flex;align-items:center}
+ .legal-guide h1,.contact-main h1{font-size:clamp(1.9rem,8vw,2.7rem)}
+ .guide-next{padding:22px 18px}
+ .guide-next .practice-actions{align-items:stretch;flex-direction:column}
+ .guide-next .practice-actions>a,.print-guide{min-height:44px;display:flex;align-items:center;justify-content:center;text-align:center}
+}
+@media print{
+ body{background:white!important;color:black!important;padding:0!important}
+ .site-header,.skip-link,.floating-whatsapp,.guide-next,.guide-footer,.guide-toc,.guide-source-inline{display:none!important}
+ .practice-main{max-width:none!important;padding:0!important}
+ .guide-prose,.guide-sources{max-width:none}
+ a{color:inherit!important;text-decoration:none!important}
+ h1{font-size:24pt!important}h2{font-size:16pt!important;break-after:avoid}
+ p,li{font-size:10pt!important;line-height:1.5!important}
+ .guide-prose section{break-inside:auto}.guide-sources{break-before:auto}
+}
